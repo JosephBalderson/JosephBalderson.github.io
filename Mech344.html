@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph Balderson</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
@@ -29,6 +30,50 @@
                 style="width: 19px; height: 19px; object-fit: cover;"></a>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Mech344_1.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Mech344_2.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Mech344_3.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Mech344_4.png" style="width:100%">
+        </div>
+    </div>
+    <br>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 10000); // Change image every 2 seconds
+        }
+    </script>
+
     <div>
         <h2>Mech 344: Heat and Mass Transfer</h2>
         <p>Heat and Mass Transfer is about the thermal transport properties of substances, conduction, convection,
@@ -36,10 +81,11 @@
             transfer to solve two problems with Python. This also includes an in-class example, which I solved and
             included the professor's code.</p>
     </div>
-   <div class="scroll">
-    <script
-    src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJosephBalderson%2FMech344_NodalHeatTransfer%2Fblob%2Fmain%2Fmech344pythpro.py&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-   </div>
+    <div class="scroll">
+        <script
+            src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJosephBalderson%2FMech344_NodalHeatTransfer%2Fblob%2Fmain%2Fmech344pythpro.py&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+    </div>
+
 </body>
 
 </html>
