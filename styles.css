@@ -30,6 +30,17 @@ img {
   font-weight: bold;
 }
 
+.textg {
+  color: #696969;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
 .textw {
   color: #f1f1f1;
   font-size: 30px;
