@@ -29,6 +29,53 @@
                 style="width: 19px; height: 19px; object-fit: cover;"></a>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Mech344_1.png" style="width:100%">
+            <div class="textb">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Mech344_2.png" style="width:100%">
+            <div class="textb">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Mech344_3.png" style="width:100%">
+            <div class="textb">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Mech344_4.png" style="width:100%">
+            <div class="textb">Caption Text</div>
+        </div>
+    </div>
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 10000); // Change image every 2 seconds
+        }
+    </script>
     <div>
         <h2>Mech 307: Mechatronics and Measurement Systems</h2>
         <p>Mechatronic and measurement system analysis and design; applied electronics; data acquisition;
